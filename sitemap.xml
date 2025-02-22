@@ -2,7 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/2025/02/22/hello-world/</loc>
+    <loc>https://ooyyh.github.io/categories/index.html</loc>
+    
+    <lastmod>2025-02-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ooyyh.github.io/tags/index.html</loc>
+    
+    <lastmod>2025-02-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ooyyh.github.io/2025/02/22/test/</loc>
+    
+    <lastmod>2025-02-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ooyyh.github.io/2025/02/22/hello-world/</loc>
     
     <lastmod>2025-02-22</lastmod>
     
@@ -12,13 +39,41 @@
   
 
   <url>
-    <loc>http://example.com/</loc>
+    <loc>https://ooyyh.github.io/</loc>
     <lastmod>2025-02-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
+  <url>
+    <loc>https://ooyyh.github.io/tags/%E6%A0%87%E7%AD%BE1/</loc>
+    <lastmod>2025-02-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ooyyh.github.io/tags/%E6%A0%87%E7%AD%BE2/</loc>
+    <lastmod>2025-02-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
+  
+  <url>
+    <loc>https://ooyyh.github.io/categories/%E5%88%86%E7%B1%BB/</loc>
+    <lastmod>2025-02-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ooyyh.github.io/categories/%E5%88%86%E7%B1%BB/%E5%AD%90%E5%88%86%E7%B1%BB/</loc>
+    <lastmod>2025-02-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
 </urlset>

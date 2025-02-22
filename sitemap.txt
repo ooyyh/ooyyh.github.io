@@ -1,2 +1,9 @@
-http://example.com/2025/02/22/hello-world/
-http://example.com/
+https://ooyyh.github.io/categories/index.html
+https://ooyyh.github.io/tags/index.html
+https://ooyyh.github.io/2025/02/22/test/
+https://ooyyh.github.io/2025/02/22/hello-world/
+https://ooyyh.github.io/
+https://ooyyh.github.io/tags/%E6%A0%87%E7%AD%BE1/
+https://ooyyh.github.io/tags/%E6%A0%87%E7%AD%BE2/
+https://ooyyh.github.io/categories/%E5%88%86%E7%B1%BB/
+https://ooyyh.github.io/categories/%E5%88%86%E7%B1%BB/%E5%AD%90%E5%88%86%E7%B1%BB/
