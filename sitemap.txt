@@ -1,9 +1,7 @@
+https://ooyyh.github.io/2025/02/22/Minecraft/Minecraft%E5%8D%8F%E8%AE%AE%EF%BC%88%E4%BA%8C%EF%BC%89%E7%99%BB%E5%BD%95%E7%8A%B6%E6%80%81/
+https://ooyyh.github.io/2025/02/22/Minecraft/Minecraft%E5%8D%8F%E8%AE%AE%EF%BC%88%E4%B8%80%EF%BC%89%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/
 https://ooyyh.github.io/categories/index.html
 https://ooyyh.github.io/tags/index.html
-https://ooyyh.github.io/2025/02/22/test/
-https://ooyyh.github.io/2025/02/22/hello-world/
 https://ooyyh.github.io/
-https://ooyyh.github.io/tags/%E6%A0%87%E7%AD%BE1/
-https://ooyyh.github.io/tags/%E6%A0%87%E7%AD%BE2/
-https://ooyyh.github.io/categories/%E5%88%86%E7%B1%BB/
-https://ooyyh.github.io/categories/%E5%88%86%E7%B1%BB/%E5%AD%90%E5%88%86%E7%B1%BB/
+https://ooyyh.github.io/tags/Minecraft/
+https://ooyyh.github.io/categories/MinecraftProtocol/
