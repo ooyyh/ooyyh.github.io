@@ -6,7 +6,7 @@
   <link href="https://ooyyh.github.io/atom.xml" rel="self"/>
   
   <link href="https://ooyyh.github.io/"/>
-  <updated>2026-01-04T13:58:52.166Z</updated>
+  <updated>2026-01-04T14:25:40.063Z</updated>
   <id>https://ooyyh.github.io/</id>
   
   <author>
@@ -17,15 +17,121 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>测试更新</title>
-    <link href="https://ooyyh.github.io/2026/01/04/%E6%B5%8B%E8%AF%95%E6%9B%B4%E6%96%B0/"/>
-    <id>https://ooyyh.github.io/2026/01/04/%E6%B5%8B%E8%AF%95%E6%9B%B4%E6%96%B0/</id>
-    <published>2026-01-04T13:58:52.000Z</published>
-    <updated>2026-01-04T13:58:52.166Z</updated>
+    <title>Docker版本更换指南</title>
+    <link href="https://ooyyh.github.io/2026/01/04/Docker%E7%89%88%E6%9C%AC%E6%9B%B4%E6%8D%A2%E6%8C%87%E5%8D%97/"/>
+    <id>https://ooyyh.github.io/2026/01/04/Docker%E7%89%88%E6%9C%AC%E6%9B%B4%E6%8D%A2%E6%8C%87%E5%8D%97/</id>
+    <published>2026-01-04T14:18:40.000Z</published>
+    <updated>2026-01-04T14:25:40.063Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Docker-版本更换指南"><a href="#Docker-版本更换指南" class="headerlink" title="Docker 版本更换指南"></a>Docker 版本更换指南</h1><p>当需要降级或升级 Docker 版本时，本指南将帮助您完成操作。</p><h2 id="卸载旧版本"><a href="#卸载旧版本" class="headerlink" title="卸载旧版本"></a>卸载旧版本</h2><p>首先，删除老版本的所有 Docker 组件：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">删除老版本的所有docker组件</span></span><br><span class="line">sudo apt remove -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">清理配置</span></span><br><span class="line">sudo apt purge -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">删除残留文件</span></span><br><span class="line">sudo rm -rf /var/lib/docker /var/lib/containerd</span><br></pre></td></tr></table></figure><h2 id="添加官方仓库"><a href="#添加官方仓库" class="headerlink" title="添加官方仓库"></a>添加官方仓库</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更新包列表</span></span><br><span class="line">sudo apt update</span><br><span class="line">sudo apt install -y ca-certificates curl gnupg</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">创建密钥环目录</span></span><br><span class="line">sudo mkdir -p /etc/apt/keyrings</span><br><span class="line">curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo tee /etc/apt/keyrings/docker.asc &gt; /dev/null</span><br><span class="line">sudo chmod a+r /etc/apt/keyrings/docker.asc</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">添加 Docker 官方仓库</span></span><br><span class="line">echo \</span><br><span class="line">  &quot;deb [arch=amd64 signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \</span><br><span class="line"><span class="meta prompt_">  $</span><span class="language-bash">(lsb_release -cs) stable<span class="string">&quot; | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null</span></span></span><br><span class="line"></span><br><span class="line">sudo apt update</span><br></pre></td></tr></table></figure><h2 id="查看可用版本"><a href="#查看可用版本" class="headerlink" title="查看可用版本"></a>查看可用版本</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看可用的 Docker 版本</span></span><br><span class="line">apt-cache madison docker-ce</span><br></pre></td></tr></table></figure><p>![查看Docker版本](&#x2F;images&#x2F;Pasted image 20250320170449.png)</p><p>以25.0.1为例安装：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install -y docker-ce=5:25.0.1-1~ubuntu.22.04~jammy docker-ce-cli=5:25.0.1-1~ubuntu.22.04~jammy containerd.io</span><br></pre></td></tr></table></figure><h2 id="验证安装"><a href="#验证安装" class="headerlink" title="验证安装"></a>验证安装</h2><p>安装完成后，验证 Docker 版本：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker --version</span><br></pre></td></tr></table></figure><h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ul><li>更换版本前请确保已备份重要数据和容器镜像</li><li>不同版本的 Docker 可能存在兼容性问题</li><li>建议在测试环境中先验证版本更换操作</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Docker-版本更换指南&quot;&gt;&lt;a href=&quot;#Docker-版本更换指南&quot; class=&quot;headerlink&quot; title=&quot;Docker 版本更换指南&quot;&gt;&lt;/a&gt;Docker 版本更换指南&lt;/h1&gt;&lt;p&gt;当需要降级或升级 Docker 版本时，本指南将帮助</summary>
+      
     
     
     
+    <category term="DevOps" scheme="https://ooyyh.github.io/categories/DevOps/"/>
     
+    
+    <category term="Docker" scheme="https://ooyyh.github.io/tags/Docker/"/>
+    
+    <category term="版本管理" scheme="https://ooyyh.github.io/tags/%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/"/>
+    
+    <category term="容器技术" scheme="https://ooyyh.github.io/tags/%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java注解实现指南</title>
+    <link href="https://ooyyh.github.io/2026/01/04/Java%E6%B3%A8%E8%A7%A3%E5%AE%9E%E7%8E%B0%E6%8C%87%E5%8D%97/"/>
+    <id>https://ooyyh.github.io/2026/01/04/Java%E6%B3%A8%E8%A7%A3%E5%AE%9E%E7%8E%B0%E6%8C%87%E5%8D%97/</id>
+    <published>2026-01-04T14:18:29.000Z</published>
+    <updated>2026-01-04T14:19:57.210Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Java-如何实现一个注解"><a href="#Java-如何实现一个注解" class="headerlink" title="Java 如何实现一个注解"></a>Java 如何实现一个注解</h1><p>在开发框架时，注解是一个非常重要的概念。本文将详细介绍如何在Java中实现一个注解。</p><h2 id="1-认识注解"><a href="#1-认识注解" class="headerlink" title="1. 认识注解"></a>1. 认识注解</h2><p>要写注解首先要认识注解是什么，注解其实只是一个标记，类似于在笔记上做的标签，告诉编译器或者解释器要如何处理这个函数或者类，然后执行对应的操作。所以注解其实是写给程序看的，或者说写给编译器看的。</p><p>以下是一个简单的注解示例：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> top.ooyyh.bytheway.annotation;  </span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.lang.annotation.*;  </span><br><span class="line"></span><br><span class="line"><span class="meta">@Target(&#123;ElementType.METHOD, ElementType.TYPE&#125;)</span>  </span><br><span class="line"><span class="meta">@Retention(RetentionPolicy.RUNTIME)</span>  </span><br><span class="line"><span class="meta">@Documented</span>  </span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> AuthRequired &#123;  </span><br><span class="line">    String[] permissions() <span class="keyword">default</span> &#123;&#125;; <span class="comment">// 需要的权限列表  </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="注解元素说明"><a href="#注解元素说明" class="headerlink" title="注解元素说明"></a>注解元素说明</h3><ul><li><code>@Target</code>：确定注解可以用在哪些地方。<code>ElementType.METHOD</code> 表示可以用于方法，<code>ElementType.TYPE</code> 表示可以用于类&#x2F;接口。</li><li><code>@Retention</code>：指定注解的生命周期。一般使用 <code>RetentionPolicy.RUNTIME</code>，这样注解在运行时仍然可用。</li><li><code>@Documented</code>：表示这个注解会被编译后写入Java doc。</li></ul><h2 id="2-如何实现注解功能"><a href="#2-如何实现注解功能" class="headerlink" title="2. 如何实现注解功能"></a>2. 如何实现注解功能</h2><p>注解声明之后，需要通过其他机制来实现具体的功能。常用的实现方式有：</p><ul><li>Spring 拦截器</li><li>Spring 过滤器</li><li>AOP（面向切面编程）</li><li>反射机制</li></ul><p>在实际项目中，通常使用 AOP 和拦截器来实现注解的具体功能。</p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>注解是Java中一个强大的特性，可以极大地简化代码的编写，特别是在框架开发中。通过合理使用注解，可以实现很多高级功能，如权限控制、日志记录、事务管理等。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Java-如何实现一个注解&quot;&gt;&lt;a href=&quot;#Java-如何实现一个注解&quot; class=&quot;headerlink&quot; title=&quot;Java 如何实现一个注解&quot;&gt;&lt;/a&gt;Java 如何实现一个注解&lt;/h1&gt;&lt;p&gt;在开发框架时，注解是一个非常重要的概念。本文将详细介</summary>
+      
+    
+    
+    
+    <category term="编程语言" scheme="https://ooyyh.github.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    
+    <category term="Java" scheme="https://ooyyh.github.io/tags/Java/"/>
+    
+    <category term="注解" scheme="https://ooyyh.github.io/tags/%E6%B3%A8%E8%A7%A3/"/>
+    
+    <category term="框架开发" scheme="https://ooyyh.github.io/tags/%E6%A1%86%E6%9E%B6%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="AOP" scheme="https://ooyyh.github.io/tags/AOP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Cloudflare-Workers入门指南</title>
+    <link href="https://ooyyh.github.io/2026/01/04/Cloudflare-Workers%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/"/>
+    <id>https://ooyyh.github.io/2026/01/04/Cloudflare-Workers%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/</id>
+    <published>2026-01-04T14:18:17.000Z</published>
+    <updated>2026-01-04T14:25:14.842Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Cloudflare-Workers-入门使用指南"><a href="#Cloudflare-Workers-入门使用指南" class="headerlink" title="Cloudflare Workers 入门使用指南"></a>Cloudflare Workers 入门使用指南</h1><p>Cloudflare Workers 是一个无服务器 (Serverless) 平台，允许您在 Cloudflare 的全球网络上运行 JavaScript、TypeScript 或 WebAssembly 代码，而无需配置或管理服务器。</p><h2 id="1-注册-Cloudflare"><a href="#1-注册-Cloudflare" class="headerlink" title="1. 注册 Cloudflare"></a>1. 注册 Cloudflare</h2><p>访问 <a href="https://dash.cloudflare.com/">https://dash.cloudflare.com/</a> 注册账户。注意：在国内网络环境下可能无法注册，需要使用代理。</p><h2 id="2-配置开发环境"><a href="#2-配置开发环境" class="headerlink" title="2. 配置开发环境"></a>2. 配置开发环境</h2><p>首先搭建 Node.js 环境。然后在桌面新建一个 code 文件夹，运行命令：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm create cloudflare</span><br></pre></td></tr></table></figure><p>按照提示完成项目初始化。</p><p>![Cloudflare项目初始化](&#x2F;images&#x2F;Pasted image 20250402180541.png)</p><h2 id="3-运行项目"><a href="#3-运行项目" class="headerlink" title="3. 运行项目"></a>3. 运行项目</h2><p>使用 Visual Studio Code 等 IDE 打开项目。项目的核心文件包括：</p><ul><li><strong>package.json</strong>：包含项目依赖，其中 Wrangler 是核心依赖</li><li><strong>wrangler.jsonc</strong>：Wrangler 的配置选项，可以关联使用 Cloudflare 的其他服务</li><li><strong>src&#x2F;index.js</strong>：默认导出一个 fetch 方法</li></ul><p>![项目结构](&#x2F;images&#x2F;Pasted image 20250402181616.png)</p><p>第二个核心配置文件就是 <strong>wrangler.jsonc</strong></p><p>![Wrangler配置文件](&#x2F;images&#x2F;Pasted image 20250402181839.png)</p><p>这里是 <strong>Wrangler</strong> 的一些配置选项，我们可以在这里并联使用cloudflare的全家桶服务。</p><p>第三个核心文件就是 <strong>src&#x2F;index.js</strong> 这个文件</p><p>![index.js文件](&#x2F;images&#x2F;Pasted image 20250402182052.png)</p><p>可以看到这里默认导出了一个fetch方法并返回了一个hello world。</p><p>那么我们使用之前在<strong>package.json</strong>里看到的script启动该服务<code>npm run dev</code></p><p>![本地运行服务](&#x2F;images&#x2F;Pasted image 20250402182449.png)</p><p>可以看到在本地8787端口下启动了一个服务。访问即可看到返回了一个<strong>HelloWorld</strong></p><p>![访问HelloWorld](&#x2F;images&#x2F;Pasted image 20250402182618.png)</p><h2 id="4-部署服务"><a href="#4-部署服务" class="headerlink" title="4. 部署服务"></a>4. 部署服务</h2><p>在部署之前，我们首先要登录自己的cloudflare账号（没有指向自己的账号的话难道部署到别人的号上去嘛awa）在网页端登录之后。在项目里输入命令 <code>npx wrangler login</code> 就会自动弹出浏览器授权登录</p><p>![登录Cloudflare](&#x2F;images&#x2F;Pasted image 20250402183254.png)</p><p>![授权登录](&#x2F;images&#x2F;Pasted image 20250402183406.png)</p><p><strong>点击允许</strong></p><p>![授权成功](&#x2F;images&#x2F;Pasted image 20250402183434.png)</p><p>到这我们就成功授权了wrangler对我们CF账号的操作</p><p>所以我们就可以直接使用wrangler部署我们的workers到全世界的CF节点了！！！</p><p>在命令窗里输入 <code>npx wrangler deploy</code><br>即可部署。</p><p>![部署成功](&#x2F;images&#x2F;Pasted image 20250402183651.png)</p><p>不报错即部署成功。我们回到浏览器上看看DashBorad点击 <strong>Workers和Pages</strong> 即可看到我们刚刚部署的服务</p><p>![查看部署的服务](&#x2F;images&#x2F;Pasted image 20250402183825.png)</p><p>![服务详情](&#x2F;images&#x2F;Pasted image 20250402183910.png)</p><p>点击访问即可看到CF为我们分配了一个免费的多级域名。虽然很丑陋但是对于我们免费用户来说又算得了什么呢awa。</p><p>![分配的域名](&#x2F;images&#x2F;Pasted image 20250402184026.png)</p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>通过以上步骤，您已经成功配置并部署了第一个 Cloudflare Workers 服务。这个服务将在全球的 Cloudflare 节点上运行，无论用户在世界任何地方都可以快速访问。后续可以为 Workers 编写更复杂的逻辑，甚至集成数据库作为后端使用。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Cloudflare-Workers-入门使用指南&quot;&gt;&lt;a href=&quot;#Cloudflare-Workers-入门使用指南&quot; class=&quot;headerlink&quot; title=&quot;Cloudflare Workers 入门使用指南&quot;&gt;&lt;/a&gt;Cloudflare </summary>
+      
+    
+    
+    
+    <category term="Web开发" scheme="https://ooyyh.github.io/categories/Web%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="Cloudflare" scheme="https://ooyyh.github.io/tags/Cloudflare/"/>
+    
+    <category term="Workers" scheme="https://ooyyh.github.io/tags/Workers/"/>
+    
+    <category term="Serverless" scheme="https://ooyyh.github.io/tags/Serverless/"/>
+    
+    <category term="JavaScript" scheme="https://ooyyh.github.io/tags/JavaScript/"/>
+    
+    <category term="入门指南" scheme="https://ooyyh.github.io/tags/%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Docker安装指南</title>
+    <link href="https://ooyyh.github.io/2026/01/04/Docker%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/"/>
+    <id>https://ooyyh.github.io/2026/01/04/Docker%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/</id>
+    <published>2026-01-04T14:18:04.000Z</published>
+    <updated>2026-01-04T14:18:54.348Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Docker安装指南"><a href="#Docker安装指南" class="headerlink" title="Docker安装指南"></a>Docker安装指南</h1><p>在本文中，我将介绍最简单的Docker安装方法。</p><h2 id="最简单的安装方法"><a href="#最简单的安装方法" class="headerlink" title="最简单的安装方法"></a>最简单的安装方法</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget get.docker.com</span><br><span class="line">bash index.html</span><br></pre></td></tr></table></figure><p>这种方法会自动检测您的系统并安装适合版本的Docker。</p><h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ul><li>安装完成后，您可能需要将当前用户添加到docker组以避免使用sudo运行Docker命令：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> usermod -aG docker <span class="variable">$USER</span></span><br></pre></td></tr></table></figure></li><li>重新登录或重启系统以使组权限生效。</li></ul><h2 id="验证安装"><a href="#验证安装" class="headerlink" title="验证安装"></a>验证安装</h2><p>安装完成后，可以通过运行以下命令验证Docker是否正常工作：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker --version</span><br><span class="line">docker run hello-world</span><br></pre></td></tr></table></figure><p>如果能看到”Hello from Docker!”消息，则表示Docker已成功安装并运行。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Docker安装指南&quot;&gt;&lt;a href=&quot;#Docker安装指南&quot; class=&quot;headerlink&quot; title=&quot;Docker安装指南&quot;&gt;&lt;/a&gt;Docker安装指南&lt;/h1&gt;&lt;p&gt;在本文中，我将介绍最简单的Docker安装方法。&lt;/p&gt;
+&lt;h2 id=&quot;最</summary>
+      
+    
+    
+    
+    <category term="DevOps" scheme="https://ooyyh.github.io/categories/DevOps/"/>
+    
+    
+    <category term="Docker" scheme="https://ooyyh.github.io/tags/Docker/"/>
+    
+    <category term="容器技术" scheme="https://ooyyh.github.io/tags/%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="安装指南" scheme="https://ooyyh.github.io/tags/%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/"/>
     
   </entry>
   
@@ -54,23 +160,6 @@
     <id>https://ooyyh.github.io/2025/02/22/Minecraft/Minecraft%E5%8D%8F%E8%AE%AE%EF%BC%88%E4%B8%80%EF%BC%89%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</id>
     <published>2025-02-22T12:55:30.000Z</published>
     <updated>2025-02-22T13:02:29.883Z</updated>
-    
-    
-    
-    
-    <category term="MinecraftProtocol" scheme="https://ooyyh.github.io/categories/MinecraftProtocol/"/>
-    
-    
-    <category term="Minecraft" scheme="https://ooyyh.github.io/tags/Minecraft/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Minecraft协议（一）数据类型</title>
-    <link href="https://ooyyh.github.io/2025/02/22/%E6%B5%8B%E8%AF%95%E6%9B%B4%E6%96%B0/test/"/>
-    <id>https://ooyyh.github.io/2025/02/22/%E6%B5%8B%E8%AF%95%E6%9B%B4%E6%96%B0/test/</id>
-    <published>2025-02-22T12:55:30.000Z</published>
-    <updated>2026-01-04T13:59:27.934Z</updated>
     
     
     
