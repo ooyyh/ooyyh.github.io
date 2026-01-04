@@ -6,7 +6,7 @@
   <link href="https://ooyyh.github.io/atom.xml" rel="self"/>
   
   <link href="https://ooyyh.github.io/"/>
-  <updated>2025-02-22T13:13:01.629Z</updated>
+  <updated>2026-01-04T13:58:52.166Z</updated>
   <id>https://ooyyh.github.io/</id>
   
   <author>
@@ -15,6 +15,19 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>测试更新</title>
+    <link href="https://ooyyh.github.io/2026/01/04/%E6%B5%8B%E8%AF%95%E6%9B%B4%E6%96%B0/"/>
+    <id>https://ooyyh.github.io/2026/01/04/%E6%B5%8B%E8%AF%95%E6%9B%B4%E6%96%B0/</id>
+    <published>2026-01-04T13:58:52.000Z</published>
+    <updated>2026-01-04T13:58:52.166Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Minecraft协议（二）登录状态</title>
@@ -41,6 +54,23 @@
     <id>https://ooyyh.github.io/2025/02/22/Minecraft/Minecraft%E5%8D%8F%E8%AE%AE%EF%BC%88%E4%B8%80%EF%BC%89%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</id>
     <published>2025-02-22T12:55:30.000Z</published>
     <updated>2025-02-22T13:02:29.883Z</updated>
+    
+    
+    
+    
+    <category term="MinecraftProtocol" scheme="https://ooyyh.github.io/categories/MinecraftProtocol/"/>
+    
+    
+    <category term="Minecraft" scheme="https://ooyyh.github.io/tags/Minecraft/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Minecraft协议（一）数据类型</title>
+    <link href="https://ooyyh.github.io/2025/02/22/%E6%B5%8B%E8%AF%95%E6%9B%B4%E6%96%B0/test/"/>
+    <id>https://ooyyh.github.io/2025/02/22/%E6%B5%8B%E8%AF%95%E6%9B%B4%E6%96%B0/test/</id>
+    <published>2025-02-22T12:55:30.000Z</published>
+    <updated>2026-01-04T13:59:27.934Z</updated>
     
     
     
