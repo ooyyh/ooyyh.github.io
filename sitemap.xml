@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://ooyyh.github.io/2026/01/04/Docker%E7%89%88%E6%9C%AC%E6%9B%B4%E6%8D%A2%E6%8C%87%E5%8D%97/</loc>
+    <loc>https://ooyyh.github.io/2026/01/04/Minecraft%E5%8D%8F%E8%AE%AE%EF%BC%88%E5%85%AD%EF%BC%89Play%E7%8A%B6%E6%80%81%E8%AF%A6%E8%A7%A3/Minecraft%E5%8D%8F%E8%AE%AE%EF%BC%88%E5%85%AD%EF%BC%89Play%E7%8A%B6%E6%80%81%E8%AF%A6%E8%A7%A3/</loc>
     
     <lastmod>2026-01-04</lastmod>
     
@@ -11,7 +11,43 @@
   </url>
   
   <url>
-    <loc>https://ooyyh.github.io/2026/01/04/Cloudflare-Workers%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/</loc>
+    <loc>https://ooyyh.github.io/2026/01/04/Minecraft%E5%8D%8F%E8%AE%AE%EF%BC%88%E4%BA%94%EF%BC%89%E7%99%BB%E5%BD%95%E5%8C%85%E8%AF%A6%E8%A7%A3/Minecraft%E5%8D%8F%E8%AE%AE%EF%BC%88%E4%BA%94%EF%BC%89%E7%99%BB%E5%BD%95%E5%8C%85%E8%AF%A6%E8%A7%A3/</loc>
+    
+    <lastmod>2026-01-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ooyyh.github.io/2026/01/04/Minecraft%E5%8D%8F%E8%AE%AE%EF%BC%88%E5%9B%9B%EF%BC%89%E7%8A%B6%E6%80%81%E5%8C%85%E8%AF%A6%E8%A7%A3/Minecraft%E5%8D%8F%E8%AE%AE%EF%BC%88%E5%9B%9B%EF%BC%89%E7%8A%B6%E6%80%81%E5%8C%85%E8%AF%A6%E8%A7%A3/</loc>
+    
+    <lastmod>2026-01-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ooyyh.github.io/2026/01/04/Minecraft%E5%8D%8F%E8%AE%AE%EF%BC%88%E4%B8%89%EF%BC%89%E6%8F%A1%E6%89%8B%E5%8C%85%E8%A7%A3%E6%9E%90/Minecraft%E5%8D%8F%E8%AE%AE%EF%BC%88%E4%B8%89%EF%BC%89%E6%8F%A1%E6%89%8B%E5%8C%85%E8%A7%A3%E6%9E%90/</loc>
+    
+    <lastmod>2026-01-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ooyyh.github.io/2026/01/04/Docker%E7%89%88%E6%9C%AC%E6%9B%B4%E6%8D%A2%E6%8C%87%E5%8D%97/Docker%E7%89%88%E6%9C%AC%E6%9B%B4%E6%8D%A2%E6%8C%87%E5%8D%97/</loc>
+    
+    <lastmod>2026-01-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ooyyh.github.io/2026/01/04/Cloudflare-Workers%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/Cloudflare-Workers%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/</loc>
     
     <lastmod>2026-01-04</lastmod>
     
@@ -47,7 +83,7 @@
   </url>
   
   <url>
-    <loc>https://ooyyh.github.io/2026/01/04/Java%E6%B3%A8%E8%A7%A3%E5%AE%9E%E7%8E%B0%E6%8C%87%E5%8D%97/</loc>
+    <loc>https://ooyyh.github.io/2026/01/04/Java%E6%B3%A8%E8%A7%A3%E5%AE%9E%E7%8E%B0%E6%8C%87%E5%8D%97/Java%E6%B3%A8%E8%A7%A3%E5%AE%9E%E7%8E%B0%E6%8C%87%E5%8D%97/</loc>
     
     <lastmod>2026-01-04</lastmod>
     
@@ -56,7 +92,7 @@
   </url>
   
   <url>
-    <loc>https://ooyyh.github.io/2026/01/04/Docker%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/</loc>
+    <loc>https://ooyyh.github.io/2026/01/04/Docker%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/Docker%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/</loc>
     
     <lastmod>2026-01-04</lastmod>
     
@@ -202,6 +238,62 @@
   
   <url>
     <loc>https://ooyyh.github.io/tags/Minecraft/</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ooyyh.github.io/tags/%E5%8D%8F%E8%AE%AE/</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ooyyh.github.io/tags/%E6%8F%A1%E6%89%8B%E5%8C%85/</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ooyyh.github.io/tags/%E7%BD%91%E7%BB%9C/</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ooyyh.github.io/tags/%E7%99%BB%E5%BD%95%E5%8C%85/</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ooyyh.github.io/tags/%E8%AE%A4%E8%AF%81/</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ooyyh.github.io/tags/%E7%8A%B6%E6%80%81%E5%8C%85/</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ooyyh.github.io/tags/Play%E7%8A%B6%E6%80%81/</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ooyyh.github.io/tags/%E6%B8%B8%E6%88%8F%E4%BA%A4%E4%BA%92/</loc>
     <lastmod>2026-01-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
